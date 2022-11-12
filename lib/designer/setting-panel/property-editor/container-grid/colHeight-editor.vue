@@ -14,7 +14,7 @@
 
 <script>
 import { i18n } from "coder-vform-render";
-import propertyMixin from '../../property-editor/index'
+import propertyMixin from '../../property-editor/propertyMixin'
 //import propertyMixin from '../../property-editor/index'
 
 export default {

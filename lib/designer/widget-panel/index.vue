@@ -208,7 +208,6 @@ import {
   customFields as CFS,
 } from "../../widgetsConfig";
 import { formTemplates } from "./templatesConfig";
-i;
 import { i18n, util } from "coder-vform-render";
 const { addWindowResizeHandler, generateId } = util;
 import axios from "axios";
