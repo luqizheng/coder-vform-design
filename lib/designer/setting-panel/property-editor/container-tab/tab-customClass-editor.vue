@@ -64,7 +64,7 @@
       </draggable>
 
       <div>
-        <el-button type="text" @click="addTabPane(selectedWidget)">{{
+        <el-button type="default" @click="addTabPane(selectedWidget)">{{
           i18nt("designer.setting.addTabPane")
         }}</el-button>
       </div>

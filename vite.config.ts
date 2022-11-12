@@ -1,25 +1,31 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path, { resolve } from "path";
-
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()
-
-
-
-  ],
+    ,
+  vueJsx(),
+  createSvgIconsPlugin({
+    // Specify the icon folder to be cached
+    iconDirs: [resolve(process.cwd(), 'lib/icons/svg')],
+    // Specify symbolId format
+    symbolId: 'icon-[dir]-[name]',
+  })],
+  
   resolve: {
     alias: {
       "@": resolve(__dirname, 'lib')
     },
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
   },
- 
+
   build: {
     lib: {
       entry: path.resolve(__dirname, "lib/index"),
-      name: "coder-notification-client",
+      name: "coder-vform-designer",
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {

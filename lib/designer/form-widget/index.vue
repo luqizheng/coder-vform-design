@@ -11,7 +11,7 @@
         <div class="no-widget-hint">{{ i18nt("designer.noWidgetHint") }}</div>
       </template>
 
-      <div class="form-widget-list">aaaaaaaaaaaaaaaa
+      <div class="form-widget-list">
         <draggable
           :list="designer.widgetList"
           item-key="id"
@@ -38,6 +38,7 @@
                 ></component>
               </template>
               <template v-else>
+               00! {{widget.type}} !00
                 <component
                   :is="getWidgetName(widget)"
                   :field="widget"

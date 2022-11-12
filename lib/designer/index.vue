@@ -118,7 +118,7 @@ import SettingPanel from "./setting-panel/index";
 import VFormWidget from "./form-widget/index";
 import { createDesigner } from "./designer.js";
 
-import { util } from "coder-vform-render";
+import { util ,SvgIcon,changeLocale,i18n} from "coder-vform-render";
 
 const {
   addWindowResizeHandler,
@@ -129,8 +129,8 @@ const {
   traverseAllWidgets,
 } = util;
 import { MOCK_CASE_URL, VARIANT_FORM_VERSION } from "../utils/config";
-import { changeLocale,i18n,SvgIcon } from "coder-vform-render";
-import {  } from "coder-vform-render";
+
+
 import axios from "axios";
 
 

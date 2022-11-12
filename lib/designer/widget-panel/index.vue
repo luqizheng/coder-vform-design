@@ -185,7 +185,7 @@
               <div class="bottom clear-fix">
                 <span class="ft-title">#{{ idx + 1 }} {{ ft.title }}</span>
                 <el-button
-                  type="text"
+                  type="default"
                   class="right-button"
                   @click="loadFormTemplate(ft.jsonUrl)"
                 >
@@ -208,7 +208,7 @@ import {
   customFields as CFS,
 } from "../../widgetsConfig";
 import { formTemplates } from "./templatesConfig";
-import { i18n, util } from "coder-vform-render";
+import { i18n, util, SvgIcon } from "coder-vform-render";
 const { addWindowResizeHandler, generateId } = util;
 
 import axios from "axios";
@@ -225,7 +225,7 @@ import axios from "axios";
 export default {
   name: "FieldPanel",
   mixins: [i18n],
-  components: {},
+  components: { SvgIcon },
   props: {
     designer: Object,
   },
@@ -414,6 +414,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../style.scss";
+
+.background-opacity {
+  background: rgba(64, 158, 255, 0.6);
+}
 .color-svg-icon {
   color: $--color-primary;
 }

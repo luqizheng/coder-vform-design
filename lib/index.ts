@@ -1,25 +1,30 @@
 import { App } from 'vue'
-import { GetBasicSchema, SvgIcon } from 'coder-vform-render'
-import render from 'coder-vform-render'
+import render,{ GetBasicSchema } from 'coder-vform-render'
+
 import 'coder-vform-render/dist/style.css'
 import vFormDesigner from './designer/index.vue'
 import { addBasicFieldSchema } from './widgetsConfig'
-import { objectToString } from '@vue/shared'
 import Draggable from 'vuedraggable-es'
-
 import { registerIcon } from './utils/el-icons'
 import { addDirective } from './utils/directive'
+
+import 'virtual:svg-icons-register'
+import '@/iconfont/iconfont.css'
 
 const install = (app: App) => {
 
     addDirective(app)
     registerIcon(app)
     app.component('v-form-designer', vFormDesigner);
-    app.component('v-form-render', render)
-    app.component('svg-icon',SvgIcon)
+    app.use(render)
+
     const a = GetBasicSchema();
-    var e = a.get("HtmlTextWidget")
-    addBasicFieldSchema(e);
+    a.forEach((value:object) => {
+        console.log('aaa',value)
+        addBasicFieldSchema(value);
+    })
+
+
     app.component('draggable', Draggable)
 
 
