@@ -105,10 +105,10 @@
       </el-cascader>
     </div>
     <div v-if="selectedWidget.type === 'cascader'">
-      <el-button type="text" @click="importCascaderOptions">{{
+      <el-button type="default" @click="importCascaderOptions">{{
         i18nt("designer.setting.importOptions")
       }}</el-button>
-      <el-button type="text" @click="resetDefault">{{
+      <el-button type="default" @click="resetDefault">{{
         i18nt("designer.setting.resetDefault")
       }}</el-button>
     </div>
@@ -120,13 +120,13 @@
         selectedWidget.type === 'select'
       "
     >
-      <el-button type="text" @click="addOption">{{
+      <el-button type="default" @click="addOption">{{
         i18nt("designer.setting.addOption")
       }}</el-button>
-      <el-button type="text" @click="importOptions">{{
+      <el-button type="default" @click="importOptions">{{
         i18nt("designer.setting.importOptions")
       }}</el-button>
-      <el-button type="text" @click="resetDefault">{{
+      <el-button type="default" @click="resetDefault">{{
         i18nt("designer.setting.resetDefault")
       }}</el-button>
     </div>

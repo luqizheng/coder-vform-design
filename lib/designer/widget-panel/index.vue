@@ -185,7 +185,7 @@
               <div class="bottom clear-fix">
                 <span class="ft-title">#{{ idx + 1 }} {{ ft.title }}</span>
                 <el-button
-                  type="text"
+                  type="default"
                   class="right-button"
                   @click="loadFormTemplate(ft.jsonUrl)"
                 >

@@ -13,9 +13,6 @@ import 'element-plus/dist/index.css'
 import router from './router'
 import DevelopCompents from '../lib'
 
-
-
-
 const app = createApp(App);
 
 

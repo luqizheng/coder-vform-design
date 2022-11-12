@@ -2,7 +2,7 @@
   <div class="toolbar-container">
     <div class="left-toolbar">
       <el-button
-        type="text"
+        type="default"
         :disabled="undoDisabled"
         :title="i18nt('designer.toolbar.undoHint')"
         @click="undoHistory"
@@ -10,7 +10,7 @@
         <svg-icon icon-class="undo"
       /></el-button>
       <el-button
-        type="text"
+        type="default"
         :disabled="redoDisabled"
         :title="i18nt('designer.toolbar.redoHint')"
         @click="redoHistory"
@@ -71,7 +71,7 @@
       <div class="right-toolbar-con">
         <el-button
           v-if="showToolButton('clearDesignerButton')"
-          type="text"
+          type="default"
           @click="clearFormWidget"
         >
           <svg-icon icon-class="el-delete" />{{
@@ -80,7 +80,7 @@
         >
         <el-button
           v-if="showToolButton('previewFormButton')"
-          type="text"
+          type="default"
           @click="previewForm"
         >
           <svg-icon icon-class="el-view" />{{
@@ -89,28 +89,28 @@
         >
         <el-button
           v-if="showToolButton('importJsonButton')"
-          type="text"
+          type="default"
           @click="importJson"
         >
           {{ i18nt("designer.toolbar.importJson") }}</el-button
         >
         <el-button
           v-if="showToolButton('exportJsonButton')"
-          type="text"
+          type="default"
           @click="exportJson"
         >
           {{ i18nt("designer.toolbar.exportJson") }}</el-button
         >
         <el-button
           v-if="showToolButton('exportCodeButton')"
-          type="text"
+          type="default"
           @click="exportCode"
         >
           {{ i18nt("designer.toolbar.exportCode") }}</el-button
         >
         <el-button
           v-if="showToolButton('generateSFCButton')"
-          type="text"
+          type="default"
           @click="generateSFC"
         >
           <svg-icon icon-class="vue-sfc" />{{

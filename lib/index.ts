@@ -6,7 +6,7 @@ import { addBasicFieldSchema } from './widgetsConfig'
 import { objectToString } from '@vue/shared'
 import Draggable from 'vuedraggable-es'
 
-import { registerIcon } from '@/utils/el-icons'
+import { registerIcon } from './utils/el-icons'
 import { addDirective } from './utils/directive'
 
 const install = (app: App) => {
