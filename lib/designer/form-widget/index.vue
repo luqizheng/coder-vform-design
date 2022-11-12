@@ -38,7 +38,7 @@
                 ></component>
               </template>
               <template v-else>
-               00! {{widget.type}} !00
+           
                 <component
                   :is="getWidgetName(widget)"
                   :field="widget"
