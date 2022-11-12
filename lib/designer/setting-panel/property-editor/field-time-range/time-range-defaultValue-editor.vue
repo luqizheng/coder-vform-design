@@ -8,7 +8,7 @@
 
 <script>
 import { i18n } from "coder-vform-render";
-  import propertyMixin from "@/components/form-designer/setting-panel/property-editor/propertyMixin"
+ import propertyMixin from "../../property-editor/propertyMixin";
 
   export default {
     name: "time-range-defaultValue-editor",

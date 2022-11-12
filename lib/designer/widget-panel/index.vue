@@ -206,10 +206,11 @@ import {
   basicFields as BFS,
   advancedFields as AFS,
   customFields as CFS,
-} from "./widgetsConfig";
+} from "../../widgetsConfig";
 import { formTemplates } from "./templatesConfig";
-import { addWindowResizeHandler, generateId } from "@/utils/util";
-import { i18n } from "coder-vform-render";
+i;
+import { i18n, util } from "coder-vform-render";
+const { addWindowResizeHandler, generateId } = util;
 import axios from "axios";
 
 // import ftImg1 from '@/assets/ft-images/t1.png'
@@ -412,6 +413,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../style.scss";
 .color-svg-icon {
   color: $--color-primary;
 }

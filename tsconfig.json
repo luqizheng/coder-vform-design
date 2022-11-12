@@ -23,7 +23,7 @@
     "lib/**/*.d.ts",
     "lib/**/*.tsx",
     "lib/**/*.vue"
-, "lib/utils/emitter.js", "lib/utils/emitter.js"  ],
+, "lib/utils/emitter.js", "lib/utils/emitter.js", "lib/designer/designer.js", "lib/designer/designer.js"  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

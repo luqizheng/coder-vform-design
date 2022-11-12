@@ -1,11 +1,11 @@
 
 export const containers = [
 
-]
+] as Array<Object>
 
 export const basicFields = [
 
-]
+] as Array<Object>
 
 export const advancedFields = [
 
@@ -46,24 +46,24 @@ export const advancedFields = [
     }*/
 
 
-]
+] as Array<Object>
 
 export const customFields = [
 
-]
+] as Array<Object>
 
-export function addContainerWidgetSchema(containerSchema) {
+export function addContainerWidgetSchema(containerSchema: object) {
   containers.push(containerSchema)
 }
 
-export function addBasicFieldSchema(fieldSchema) {
+export function addBasicFieldSchema(fieldSchema: object) {
   basicFields.push(fieldSchema)
 }
 
-export function addAdvancedFieldSchema(fieldSchema) {
+export function addAdvancedFieldSchema(fieldSchema: object) {
   advancedFields.push(fieldSchema)
 }
 
-export function addCustomWidgetSchema(widgetSchema) {
+export function addCustomWidgetSchema(widgetSchema: object) {
   customFields.push(widgetSchema)
 }

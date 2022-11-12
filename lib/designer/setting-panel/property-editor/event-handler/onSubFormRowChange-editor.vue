@@ -7,7 +7,7 @@
 
 <script>
 import { i18n } from "coder-vform-render";
-  import eventMixin from "@/components/form-designer/setting-panel/property-editor/event-handler/eventMixin"
+import eventMixin from './eventMixin'
 
   export default {
     name: "onSubFormRowChange-editor",

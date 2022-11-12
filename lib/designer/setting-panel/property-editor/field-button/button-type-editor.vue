@@ -14,19 +14,17 @@
 
 <script>
 import { i18n } from "coder-vform-render";
-  import propertyMixin from "@/components/form-designer/setting-panel/property-editor/propertyMixin"
+import propertyMixin from "../../property-editor/propertyMixin.js";
 
-  export default {
-    name: "button-type-editor",
-    mixins: [i18n, propertyMixin],
-    props: {
-      designer: Object,
-      selectedWidget: Object,
-      optionModel: Object,
-    },
-  }
+export default {
+  name: "button-type-editor",
+  mixins: [i18n, propertyMixin],
+  props: {
+    designer: Object,
+    selectedWidget: Object,
+    optionModel: Object,
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

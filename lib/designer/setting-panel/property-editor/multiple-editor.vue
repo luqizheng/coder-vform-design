@@ -6,7 +6,7 @@
 
 <script>
 import { i18n } from "coder-vform-render";
-  import propertyMixin from "@/components/form-designer/setting-panel/property-editor/propertyMixin"
+import propertyMixin from "./propertyMixin";
 
   export default {
     name: "multiple-editor",
