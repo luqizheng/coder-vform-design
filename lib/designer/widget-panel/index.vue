@@ -185,7 +185,7 @@
               <div class="bottom clear-fix">
                 <span class="ft-title">#{{ idx + 1 }} {{ ft.title }}</span>
                 <el-button
-                  type="default"
+                  type="text"
                   class="right-button"
                   @click="loadFormTemplate(ft.jsonUrl)"
                 >
@@ -210,6 +210,7 @@ import {
 import { formTemplates } from "./templatesConfig";
 import { i18n, util } from "coder-vform-render";
 const { addWindowResizeHandler, generateId } = util;
+
 import axios from "axios";
 
 // import ftImg1 from '@/assets/ft-images/t1.png'
@@ -220,11 +221,11 @@ import axios from "axios";
 // import ftImg6 from '@/assets/ft-images/t6.png'
 // import ftImg7 from '@/assets/ft-images/t7.png'
 // import ftImg8 from '@/assets/ft-images/t8.png'
-import { SvgIcon } from "coder-vform-render";
+
 export default {
   name: "FieldPanel",
   mixins: [i18n],
-  components: {SvgIcon},
+  components: {},
   props: {
     designer: Object,
   },

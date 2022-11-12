@@ -472,8 +472,8 @@
 <script>
 import CodeEditor from "@/code-editor/index";
 import Clipboard from "clipboard";
-import VFormRender from "coder-vform-render"
-import { util } from "coder-vform-render";
+import VFormRender from "coder-vform-render";
+import { util, i18n, SvgIcon } from "coder-vform-render";
 import { generateCode } from "../../utils/code-generator";
 const {
   generateId,
@@ -483,8 +483,6 @@ const {
   getQueryParam,
 } = util;
 
-import { i18n } from "coder-vform-render";
-import { SvgIcon } from "coder-vform-render";
 import { genSFC } from "../../utils/sfc-generator";
 import loadBeautifier from "../../utils/beautifierLoader";
 import { saveAs } from "file-saver";
@@ -497,7 +495,7 @@ export default {
     CodeEditor,
     Clipboard,
     SvgIcon,
-    VFormRender
+    VFormRender,
   },
   props: {
     designer: Object,

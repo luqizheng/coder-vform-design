@@ -11,7 +11,7 @@
         <div class="no-widget-hint">{{ i18nt("designer.noWidgetHint") }}</div>
       </template>
 
-      <div class="form-widget-list">
+      <div class="form-widget-list">aaaaaaaaaaaaaaaa
         <draggable
           :list="designer.widgetList"
           item-key="id"
