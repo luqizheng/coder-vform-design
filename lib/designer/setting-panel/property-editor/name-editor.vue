@@ -42,10 +42,11 @@
 <script>
 import { i18n, util } from "coder-vform-render";
 const { isEmptyStr } = util;
-
+import { SvgIcon } from "coder-vform-render";
 export default {
   name: "name-editor",
   mixins: [i18n],
+  components:{SvgIcon},
   props: {
     designer: Object,
     selectedWidget: Object,

@@ -472,6 +472,7 @@
 <script>
 import CodeEditor from "@/code-editor/index";
 import Clipboard from "clipboard";
+import VFormRender from "coder-vform-render"
 import { util } from "coder-vform-render";
 import { generateCode } from "../../utils/code-generator";
 const {
@@ -483,7 +484,7 @@ const {
 } = util;
 
 import { i18n } from "coder-vform-render";
-
+import { SvgIcon } from "coder-vform-render";
 import { genSFC } from "../../utils/sfc-generator";
 import loadBeautifier from "../../utils/beautifierLoader";
 import { saveAs } from "file-saver";
@@ -495,6 +496,8 @@ export default {
   components: {
     CodeEditor,
     Clipboard,
+    SvgIcon,
+    VFormRender
   },
   props: {
     designer: Object,

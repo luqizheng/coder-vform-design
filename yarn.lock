@@ -483,10 +483,10 @@
     "select" "^1.1.2"
     "tiny-emitter" "^2.0.0"
 
-"coder-vform-render@^0.0.7":
-  "integrity" "sha512-f4TJ7txZOpI9LaaDviUDLdhrUKzGa+f3BtOklYE92c3OWY7aj78G1tbkI1LmG+D6KQe+rR3sXb4QyeM0t5OUWQ=="
-  "resolved" "https://zhcoder-npm.pkg.coding.net/coder/npm-pub/coder-vform-render/-/coder-vform-render-0.0.7/86a374d3ec80d507e5a2f3712c8e3e5082157301.tgz"
-  "version" "0.0.7"
+"coder-vform-render@^0.0.8":
+  "integrity" "sha512-DR4zU14MNCZ9uYBFPlTZ11sJUiOU3u57MLr7ggk0vAv0O34WLRgPqhZ3Yts5hZD/fY4KGZ0koy13miQx+EEvzQ=="
+  "resolved" "https://zhcoder-npm.pkg.coding.net/coder/npm-pub/coder-vform-render/-/coder-vform-render-0.0.8/3b17197b2c78e241f3156adee665d37aa15b358c.tgz"
+  "version" "0.0.8"
   dependencies:
     "axios" "^0.27.2"
     "element-plus" "^2.2.4"
@@ -1122,6 +1122,11 @@
     "chokidar" "^3.5.3"
     "webpack-sources" "^3.2.3"
     "webpack-virtual-modules" "^0.4.3"
+
+"v-drag@^3.0.8":
+  "integrity" "sha512-JLxDVKBHH0GLC8r5BMDvtEkvELQJxV/v4TphZ7UAl1i8390SCOrwLXbrNO1MSqeggvP0yUgBNgfC2IXM4sjsVw=="
+  "resolved" "https://zhcoder-npm.pkg.coding.net/coder/npm-pub/__tarballs/v-drag/3.0.8/__path/v-drag/-/v-drag-3.0.8/14b32ea7e09af4c92344ddeb31c08b45a9b2e330.tgz"
+  "version" "3.0.8"
 
 "vite@^2.3.0":
   "integrity" "sha512-fzMt2jK4vQ3yK56te3Kqpkaeq9DkcZfBbzHwYpobasvgYmP2SoAr6Aic05CsB4CzCZbsDv4sujX3pkEGhLabVQ=="

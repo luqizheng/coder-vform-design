@@ -220,11 +220,11 @@ import axios from "axios";
 // import ftImg6 from '@/assets/ft-images/t6.png'
 // import ftImg7 from '@/assets/ft-images/t7.png'
 // import ftImg8 from '@/assets/ft-images/t8.png'
-
+import { SvgIcon } from "coder-vform-render";
 export default {
   name: "FieldPanel",
   mixins: [i18n],
-  components: {},
+  components: {SvgIcon},
   props: {
     designer: Object,
   },

@@ -19,10 +19,11 @@
 
 <script>
 import { i18n } from "coder-vform-render";
-
+import { SvgIcon } from "coder-vform-render";
   export default {
     name: "picture-upload-fileTypes-editor",
     mixins: [i18n],
+    components:{SvgIcon},
     props: {
       designer: Object,
       selectedWidget: Object,

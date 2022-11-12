@@ -129,10 +129,10 @@ const {
   traverseAllWidgets,
 } = util;
 import { MOCK_CASE_URL, VARIANT_FORM_VERSION } from "../utils/config";
-import { changeLocale } from "coder-vform-render";
-import { i18n } from "coder-vform-render";
+import { changeLocale,i18n,SvgIcon } from "coder-vform-render";
+import {  } from "coder-vform-render";
 import axios from "axios";
-import { SvgIcon } from "coder-vform-render";
+
 
 export default {
   name: "VFormDesigner",

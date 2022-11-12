@@ -18,7 +18,7 @@
 
 <script>
 import { i18n } from "coder-vform-render";
-
+import { SvgIcon } from "coder-vform-render";
   export default {
     name: "validation-editor",
     mixins: [i18n],
@@ -27,6 +27,7 @@ import { i18n } from "coder-vform-render";
       selectedWidget: Object,
       optionModel: Object,
     },
+    components:{SvgIcon},
     data() {
       return {
         fieldValidators: [
