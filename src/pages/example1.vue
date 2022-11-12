@@ -1,26 +1,22 @@
 <template>
   <div>
-    <v-form-render
-      :form-json="formJson" 
-      ref="vFormRef"
-    >
-    </v-form-render>
+    <v-form-designer />
+
     <el-button type="primary" @click="submitForm">Submit</el-button>
   </div>
 </template>
 
 <script setup>
-import { ref, reactive } from "vue";
+import { ref, reactive, onMounted } from "vue";
 import { ElMessage } from "element-plus";
 import formDemo from "./demo.json";
 
-
 /* 注意：formJson是指表单设计器导出的json，此处演示的formJson只是一个空白表单json！！ */
-console.log(formDemo)
+console.log(formDemo);
 const formJson = reactive(formDemo);
 const optionData = reactive({});
 const vFormRef = ref(null);
-const formData = ref(null); 
+const formData = ref(null);
 const submitForm = () => {
   vFormRef.value
     .getFormData()
@@ -33,4 +29,8 @@ const submitForm = () => {
       ElMessage.error(error);
     });
 };
+
+onMounted(() => {
+  //vFormRef.value.setFormJson(formJson);
+});
 </script>

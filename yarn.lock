@@ -483,10 +483,10 @@
     "select" "^1.1.2"
     "tiny-emitter" "^2.0.0"
 
-"coder-vform-render@^0.0.6":
-  "integrity" "sha512-ZLiAAK9SHw3cYnN0USNAA9yHAnFVm/nkDDJ1BiTe2+ssUlYYbD/PS4Ul+/HOPc7vKuEF9fPueCzn72hm4wbASA=="
-  "resolved" "https://zhcoder-npm.pkg.coding.net/coder/npm-pub/coder-vform-render/-/coder-vform-render-0.0.6/485f01b5e0fcad8d817c4a3bf7fada3dc3f02205.tgz"
-  "version" "0.0.6"
+"coder-vform-render@^0.0.7":
+  "integrity" "sha512-f4TJ7txZOpI9LaaDviUDLdhrUKzGa+f3BtOklYE92c3OWY7aj78G1tbkI1LmG+D6KQe+rR3sXb4QyeM0t5OUWQ=="
+  "resolved" "https://zhcoder-npm.pkg.coding.net/coder/npm-pub/coder-vform-render/-/coder-vform-render-0.0.7/86a374d3ec80d507e5a2f3712c8e3e5082157301.tgz"
+  "version" "0.0.7"
   dependencies:
     "axios" "^0.27.2"
     "element-plus" "^2.2.4"
