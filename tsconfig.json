@@ -16,7 +16,8 @@
       "ESNext",
       "DOM"
     ],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+  
   },
   "include": [
     "lib/**/*.ts",

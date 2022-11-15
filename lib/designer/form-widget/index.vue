@@ -27,6 +27,7 @@
           <template #item="{ element: widget, index }">
             <div class="transition-group-el">
               <template v-if="'container' === widget.category">
+             
                 <component
                   :is="getWidgetName(widget)"
                   :widget="widget"
@@ -38,7 +39,6 @@
                 ></component>
               </template>
               <template v-else>
-           
                 <component
                   :is="getWidgetName(widget)"
                   :field="widget"
