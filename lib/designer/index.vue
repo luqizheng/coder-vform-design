@@ -11,12 +11,13 @@
 <template>
   <el-container class="main-container full-height">
     <el-header class="main-header">
+      <!--
       <div class="float-left main-title">
-        <!-- <img src="../../assets/vform-logo.png" @click="openHome" /> -->
+        <img src="../../assets/vform-logo.png" @click="openHome" />
         <span class="bold">VForm 3</span>
         {{ i18nt("application.productTitle") }}
         <span class="version-span">Ver {{ vFormVersion }}</span>
-      </div>
+      </div>-->
       <div class="float-right external-link">
         <el-dropdown
           v-if="showLink('languageMenu')"
@@ -162,9 +163,9 @@ export default {
       type: Object,
       default: () => {
         return {
-          languageMenu: true, //是否显示语言切换菜单
-          externalLink: true, //是否显示GitHub、文档等外部链接
-          formTemplates: true, //是否显示表单模板
+          languageMenu: false, //是否显示语言切换菜单
+          externalLink: false, //是否显示GitHub、文档等外部链接
+          formTemplates: false, //是否显示表单模板
           eventCollapse: true, //是否显示组件事件属性折叠面板
           widgetNameReadonly: false, //禁止修改组件名称
 
@@ -490,7 +491,7 @@ export default {
 
 .el-header.main-header {
   border-bottom: 2px dotted #ebeef5;
-  height: 48px !important;
+  height: 20px !important;
   line-height: 48px !important;
   min-width: 800px;
 }
