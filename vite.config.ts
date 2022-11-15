@@ -14,7 +14,7 @@ export default defineConfig({
     // Specify symbolId format
     symbolId: 'icon-[dir]-[name]',
   })],
-  
+
   resolve: {
     alias: {
       "@": resolve(__dirname, 'lib')
@@ -32,8 +32,8 @@ export default defineConfig({
       // 确保外部化处理那些你不想打包进库的依赖
       external: [
         "vue",
-
-
+        "@element-plus/icons-vue",
+        "@ant-design/icons-vue",
         "ant-design-vue",
         "coder-member-components-vue3",
         "element-plus",
