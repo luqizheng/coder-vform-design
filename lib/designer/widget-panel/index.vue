@@ -201,12 +201,14 @@
 </template>
 
 <script>
-import {
-  containers as CONS,
-  basicFields as BFS,
-  advancedFields as AFS,
-  customFields as CFS,
-} from "../../widgetsConfig";
+import { widgetManager } from "coder-vform-render";
+const {
+  containerFields : CONS,
+  basicFields : BFS,
+  advanceFields : AFS,
+  customFields : CFS,
+} =widgetManager
+
 import { formTemplates } from "./templatesConfig";
 import { i18n, util, SvgIcon } from "coder-vform-render";
 const { addWindowResizeHandler, generateId } = util;

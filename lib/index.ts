@@ -1,7 +1,7 @@
 import { App } from 'vue'
-import containerWidget, { schema as containerWidgets } from './widget/container-widget'
+import containerWidget from './widget/container-widget'
 
-import render, { WidgetManager } from 'coder-vform-render'
+import render from 'coder-vform-render'
 
 import 'coder-vform-render/dist/style.css'
 import vFormDesigner from './designer/index.vue'
@@ -22,10 +22,6 @@ const install = (app: any) => {
     app.component('v-form-designer', vFormDesigner);
     app.use(render).use(containerWidget);
 
-    //schema 处理
-    containerWidgets.forEach((value: object) => {
-        WidgetManager.addContainerWidgetSchema(value);
-    })
 
     app.component('draggable', Draggable)
 
