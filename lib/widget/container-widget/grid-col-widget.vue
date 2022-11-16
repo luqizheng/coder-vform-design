@@ -8,7 +8,6 @@
     :key="widget.id"
     @click.stop="selectWidget(widget)"
   >
-
     <draggable
       :list="widget.widgetList"
       item-key="id"
@@ -92,12 +91,9 @@
 </template>
 
 <script>
-
-import { i18n ,SvgIcon} from "coder-vform-render";
+import { i18n, SvgIcon,widgetManager } from "coder-vform-render";
 
 import refMixinDesign from "../../designer/refMixinDesign";
-
-
 
 export default {
   name: "grid-col-widget",
@@ -106,7 +102,7 @@ export default {
   inject: ["refList"],
   components: {
     SvgIcon,
-
+    ...widgetManager.components
   },
   props: {
     widget: Object,

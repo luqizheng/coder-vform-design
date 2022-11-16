@@ -38,17 +38,16 @@
 </template>
 
 <script>
-
-import { i18n } from "coder-vform-render";
+import { i18n, widgetManager } from "coder-vform-render";
 
 import containerMixin from "./containerMixin";
-import GridColWidget from './grid-col-widget'
-import refMixinDesign from "../../designer/refMixinDesign"
+import GridColWidget from "./grid-col-widget";
+import refMixinDesign from "../../designer/refMixinDesign";
 
 export default {
   name: "grid-widget",
   componentName: "ContainerWidget",
-  mixins: [i18n, containerMixin, refMixinDesign],
+  mixins: [i18n, containerMixin, refMixinDesign, ...widgetManager.components],
   inject: ["refList"],
   components: {
     GridColWidget,

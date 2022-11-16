@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import { i18n,SvgIcon } from "coder-vform-render";
+import { i18n,SvgIcon,widgetManager } from "coder-vform-render";
   import refMixinDesign from "../../designer/refMixinDesign";
   export default {
     name: "TableCellWidget",

@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import { i18n } from "coder-vform-render";
+import { i18n, widgetManager } from "coder-vform-render";
 
 import containerMixin from "./containerMixin";
 import refMixinDesign from "../../designer/refMixinDesign";
@@ -62,8 +62,8 @@ export default {
   mixins: [i18n, containerMixin, refMixinDesign],
   inject: ["refList"],
   components: {
-  
     TableCellWidget,
+    ...widgetManager.components,
   },
   props: {
     widget: Object,

@@ -80,9 +80,7 @@
 </template>
 
 <script>
-
-import { i18n} from "coder-vform-render";
-
+import { i18n, widgetManager } from "coder-vform-render";
 
 import containerMixin from "./containerMixin";
 
@@ -94,7 +92,7 @@ export default {
   mixins: [i18n, containerMixin, refMixinDesign],
   inject: ["refList"],
   components: {
-  
+    ...widgetManager.components,
   },
   props: {
     widget: Object,
@@ -141,7 +139,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../style.scss";
- .tab-container {
+.tab-container {
   //padding: 5px;
   margin: 2px;
 
