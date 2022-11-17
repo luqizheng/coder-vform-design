@@ -28,6 +28,7 @@
     "ace-builds": "^1.13.0",
     "axios": "^0.27.2",
     "clipboard": "^2.0.11",
+    "coder-vform-element-plus": "^0.2.1",
     "coder-vform-render": "^0.1.22",
     "element-plus": "^2.2.4",
     "file-saver": "^2.0.5",
