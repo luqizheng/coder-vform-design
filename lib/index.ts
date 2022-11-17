@@ -1,7 +1,6 @@
 import { App } from 'vue'
 import containerWidget from './widget/container-widget'
 
-import render from 'coder-vform-render'
 
 import 'coder-vform-render/dist/style.css'
 import vFormDesigner from './designer/index.vue'
@@ -16,15 +15,13 @@ import '@/iconfont/iconfont.css'
 
 
 const install = (app: any) => {
-
+    app.use(containerWidget);
     addDirective(app)
     registerIcon(app)
     app.component('v-form-designer', vFormDesigner);
-    app.use(render).use(containerWidget);
-
-
     app.component('draggable', Draggable)
 
 }
-vFormDesigner.install = install;
-export default vFormDesigner
+export default {
+    install: install
+}

@@ -1,5 +1,6 @@
 <template>
   <el-scrollbar class="side-scroll-bar" :style="{ height: scrollerHeight }">
+   
     <div class="panel-container">
       <el-tabs v-model="firstTab" class="no-bottom-margin indent-left-margin">
         <el-tab-pane name="componentLib">
@@ -144,7 +145,9 @@
                       <svg-icon
                         :icon-class="fld.icon"
                         class-name="color-svg-icon"
-                      />{{
+                      />
+                   
+                      {{
                         i18n2t(
                           `designer.widgetLabel.${fld.type}`,
                           `extension.widgetLabel.${fld.type}`

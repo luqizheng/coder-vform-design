@@ -476,7 +476,7 @@ import VFormRender from "coder-vform-render";
 import { util, i18n, SvgIcon } from "coder-vform-render";
 import { generateCode } from "../../utils/code-generator";
 const {
-  generateId,
+  generateId,deepClone,
   addWindowResizeHandler,
   copyToClipboard,
   traverseAllWidgets,

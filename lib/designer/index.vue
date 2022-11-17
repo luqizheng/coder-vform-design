@@ -123,11 +123,10 @@ import { util ,SvgIcon,changeLocale,i18n} from "coder-vform-render";
 
 const {
   addWindowResizeHandler,
-  deepClone,
   getQueryParam,
   getAllContainerWidgets,
   getAllFieldWidgets,
-  traverseAllWidgets,
+  traverseAllWidgets,deepClone
 } = util;
 import { MOCK_CASE_URL, VARIANT_FORM_VERSION } from "../utils/config";
 
@@ -165,7 +164,7 @@ export default {
         return {
           languageMenu: false, //是否显示语言切换菜单
           externalLink: false, //是否显示GitHub、文档等外部链接
-          formTemplates: false, //是否显示表单模板
+          formTemplates: true, //是否显示表单模板
           eventCollapse: true, //是否显示组件事件属性折叠面板
           widgetNameReadonly: false, //禁止修改组件名称
 

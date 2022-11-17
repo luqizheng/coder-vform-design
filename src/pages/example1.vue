@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-form-designer />
+    <v-form-designer ref="vFormRef" />
 
     <el-button type="primary" @click="submitForm">Submit</el-button>
   </div>
@@ -31,6 +31,6 @@ const submitForm = () => {
 };
 
 onMounted(() => {
-  //vFormRef.value.setFormJson(formJson);
+  vFormRef.value.setFormJson(formJson);
 });
 </script>

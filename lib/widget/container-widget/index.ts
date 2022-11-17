@@ -10,8 +10,8 @@ export default {
     for (const path in modules) {
 
       let comp = modules[path] as any;
-      console.log('add containers-schema', comp.name)
-      widgetManager.addComponents(comp);
+      app.component(comp.name, comp)
+
     }
 
     for (const path in schemaFiles) {
