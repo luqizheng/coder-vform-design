@@ -18,7 +18,7 @@ export default {
       if (path == "./containerMixin.js")
         continue;
       let widgetSchema = schemaFiles[path] as IScheam;
-      console.log('add containers-widget', path)
+     
       widgetManager.addContainerWidgetSchema(widgetSchema)
 
     }

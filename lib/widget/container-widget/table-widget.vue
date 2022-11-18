@@ -9,37 +9,18 @@
 -->
 
 <template>
-  <container-wrapper
-    :designer="designer"
-    :widget="widget"
-    :parent-widget="parentWidget"
-    :parent-list="parentList"
-    :index-of-parent-list="indexOfParentList"
-  >
-    <div
-      :key="widget.id"
-      class="table-container"
-      :class="[selected ? 'selected' : '', customClass]"
-      @click.stop="selectWidget(widget)"
-    >
+  <container-wrapper :designer="designer" :widget="widget" :parent-widget="parentWidget" :parent-list="parentList"
+    :index-of-parent-list="indexOfParentList">
+    <div :key="widget.id" class="table-container" :class="[selected ? 'selected' : '', customClass]"
+      @click.stop="selectWidget(widget)">
       <table class="table-layout">
         <tbody>
           <tr v-for="(row, rowIdx) in widget.rows" :key="row.id">
             <template v-for="(colWidget, colIdx) in row.cols">
-              <table-cell-widget
-                v-if="!colWidget.merged"
-                :widget="colWidget"
-                :designer="designer"
-                :key="colWidget.id"
-                :parent-list="widget.cols"
-                :row-index="rowIdx"
-                :row-length="widget.rows.length"
-                :col-index="colIdx"
-                :col-length="row.cols.length"
-                :col-array="row.cols"
-                :row-array="widget.rows"
-                :parent-widget="widget"
-              ></table-cell-widget>
+              <table-cell-widget v-if="!colWidget.merged" :widget="colWidget" :designer="designer" :key="colWidget.id"
+                :parent-list="widget.cols" :row-index="rowIdx" :row-length="widget.rows.length" :col-index="colIdx"
+                :col-length="row.cols.length" :col-array="row.cols" :row-array="widget.rows" :parent-widget="widget">
+              </table-cell-widget>
             </template>
           </tr>
         </tbody>
@@ -49,22 +30,19 @@
 </template>
 
 <script>
-import { i18n, widgetManager } from "coder-vform-render";
+import { i18n, Widgets } from "coder-vform-render";
 
 import containerMixin from "./containerMixin";
 import refMixinDesign from "../../designer/refMixinDesign";
 
-import TableCellWidget from "./table-cell-widget";
+import TableCellWidget from "./table-cell-widget.vue";
 
 export default {
   name: "table-widget",
   componentName: "ContainerWidget",
   mixins: [i18n, containerMixin, refMixinDesign],
   inject: ["refList"],
-  components: {
-    TableCellWidget,
-    ...widgetManager.components,
-  },
+  components: Widgets,
   props: {
     widget: Object,
     parentWidget: Object,
@@ -96,6 +74,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../style.scss";
+
 div.table-container {
   padding: 5px;
   border: 1px dashed #336699;

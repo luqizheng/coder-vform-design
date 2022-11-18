@@ -9,49 +9,33 @@
 -->
 
 <template>
-  <container-wrapper
-    :designer="designer"
-    :widget="widget"
-    :parent-widget="parentWidget"
-    :parent-list="parentList"
-    :index-of-parent-list="indexOfParentList"
-  >
-    <el-row
-      :key="widget.id"
-      :gutter="widget.options.gutter"
-      class="grid-container"
-      :class="[selected ? 'selected' : '', customClass]"
-      @click.stop="selectWidget(widget)"
-    >
+  <container-wrapper :designer="designer" :widget="widget" :parent-widget="parentWidget" :parent-list="parentList"
+    :index-of-parent-list="indexOfParentList">
+    <el-row :key="widget.id" :gutter="widget.options.gutter" class="grid-container"
+      :class="[selected ? 'selected' : '', customClass]" @click.stop="selectWidget(widget)">
       <template v-for="(colWidget, colIdx) in widget.cols" :key="colWidget.id">
-        <grid-col-widget
-          :widget="colWidget"
-          :designer="designer"
-          :parent-list="widget.cols"
-          :index-of-parent-list="colIdx"
-          :parent-widget="widget"
-          :col-height="widget.options.colHeight"
-        ></grid-col-widget>
+        <grid-col-widget :widget="colWidget" :designer="designer" :parent-list="widget.cols"
+          :index-of-parent-list="colIdx" :parent-widget="widget" :col-height="widget.options.colHeight">
+        </grid-col-widget>
       </template>
     </el-row>
   </container-wrapper>
 </template>
 
 <script>
-import { i18n, widgetManager } from "coder-vform-render";
+import { i18n, Widgets } from "coder-vform-render";
 
 import containerMixin from "./containerMixin";
-import GridColWidget from "./grid-col-widget";
+import GridColWidget from "./grid-col-widget.vue";
 import refMixinDesign from "../../designer/refMixinDesign";
 
 export default {
   name: "grid-widget",
   componentName: "ContainerWidget",
-  mixins: [i18n, containerMixin, refMixinDesign, ...widgetManager.components],
+  mixins: [i18n, containerMixin, refMixinDesign],
   inject: ["refList"],
-  components: {
-    GridColWidget,
-  },
+  components: Widgets,
+
   props: {
     widget: Object,
     parentWidget: Object,
@@ -83,6 +67,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../style.scss";
+
 .el-row.grid-container {
   min-height: 50px;
   //line-height: 48px;

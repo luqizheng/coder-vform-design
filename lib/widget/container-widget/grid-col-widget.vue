@@ -1,79 +1,39 @@
 <template>
-  <el-col
-    v-if="widget.type === 'grid-col'"
-    class="grid-cell"
-    v-bind="layoutProps"
-    :class="[selected ? 'selected' : '', customClass]"
-    :style="colHeightStyle"
-    :key="widget.id"
-    @click.stop="selectWidget(widget)"
-  >
-    <draggable
-      :list="widget.widgetList"
-      item-key="id"
-      v-bind="{ group: 'dragGroup', ghostClass: 'ghost', animation: 200 }"
-      tag="transition-group"
-      :component-data="{ name: 'fade' }"
-      handle=".drag-handler"
-      @end="(evt) => onGridDragEnd(evt, widget.widgetList)"
-      @add="(evt) => onGridDragAdd(evt, widget.widgetList)"
-      @update="onGridDragUpdate"
-      :move="checkContainerMove"
-    >
+  <el-col v-if="widget.type === 'grid-col'" class="grid-cell" v-bind="layoutProps"
+    :class="[selected ? 'selected' : '', customClass]" :style="colHeightStyle" :key="widget.id"
+    @click.stop="selectWidget(widget)">
+    <draggable :list="widget.widgetList" item-key="id"
+      v-bind="{ group: 'dragGroup', ghostClass: 'ghost', animation: 200 }" tag="transition-group"
+      :component-data="{ name: 'fade' }" handle=".drag-handler" @end="(evt) => onGridDragEnd(evt, widget.widgetList)"
+      @add="(evt) => onGridDragAdd(evt, widget.widgetList)" @update="onGridDragUpdate" :move="checkContainerMove">
       <template #item="{ element: subWidget, index: swIdx }">
         <div class="form-widget-list">
           <template v-if="'container' === subWidget.category">
-            <component
-              :is="subWidget.type + '-widget'"
-              :widget="subWidget"
-              :designer="designer"
-              :key="subWidget.id"
-              :parent-list="widget.widgetList"
-              :index-of-parent-list="swIdx"
-              :parent-widget="widget"
-            ></component>
+            <component :is="subWidget.type + '-widget'" :widget="subWidget" :designer="designer" :key="subWidget.id"
+              :parent-list="widget.widgetList" :index-of-parent-list="swIdx" :parent-widget="widget"></component>
           </template>
           <template v-else>
-            <component
-              :is="subWidget.type + '-widget'"
-              :field="subWidget"
-              :designer="designer"
-              :key="subWidget.id"
-              :parent-list="widget.widgetList"
-              :index-of-parent-list="swIdx"
-              :parent-widget="widget"
-              :design-state="true"
-            ></component>
+            <component :is="subWidget.type + '-widget'" :field="subWidget" :designer="designer" :key="subWidget.id"
+              :parent-list="widget.widgetList" :index-of-parent-list="swIdx" :parent-widget="widget"
+              :design-state="true"></component>
           </template>
         </div>
       </template>
     </draggable>
 
-    <div
-      class="grid-col-action"
-      v-if="designer.selectedId === widget.id && widget.type === 'grid-col'"
-    >
-      <i
-        :title="i18nt('designer.hint.selectParentWidget')"
-        @click.stop="selectParentWidget(widget)"
-        ><svg-icon icon-class="el-back"
-      /></i>
-      <i
-        v-if="!!parentList && parentList.length > 1"
-        :title="i18nt('designer.hint.moveUpWidget')"
-        @click.stop="moveUpWidget()"
-        ><svg-icon icon-class="el-move-up"
-      /></i>
-      <i
-        v-if="!!parentList && parentList.length > 1"
-        :title="i18nt('designer.hint.moveDownWidget')"
-        @click.stop="moveDownWidget()"
-        ><svg-icon icon-class="el-move-down"
-      /></i>
-      <i
-        :title="i18nt('designer.hint.cloneWidget')"
-        @click.stop="cloneGridCol(widget)"
-      >
+    <div class="grid-col-action" v-if="designer.selectedId === widget.id && widget.type === 'grid-col'">
+      <i :title="i18nt('designer.hint.selectParentWidget')" @click.stop="selectParentWidget(widget)">
+        <svg-icon icon-class="el-back" />
+      </i>
+      <i v-if="!!parentList && parentList.length > 1" :title="i18nt('designer.hint.moveUpWidget')"
+        @click.stop="moveUpWidget()">
+        <svg-icon icon-class="el-move-up" />
+      </i>
+      <i v-if="!!parentList && parentList.length > 1" :title="i18nt('designer.hint.moveDownWidget')"
+        @click.stop="moveDownWidget()">
+        <svg-icon icon-class="el-move-down" />
+      </i>
+      <i :title="i18nt('designer.hint.cloneWidget')" @click.stop="cloneGridCol(widget)">
         <svg-icon icon-class="el-clone" />
       </i>
       <i :title="i18nt('designer.hint.remove')" @click.stop="removeWidget">
@@ -81,29 +41,24 @@
       </i>
     </div>
 
-    <div
-      class="grid-col-handler"
-      v-if="designer.selectedId === widget.id && widget.type === 'grid-col'"
-    >
+    <div class="grid-col-handler" v-if="designer.selectedId === widget.id && widget.type === 'grid-col'">
       <i>{{ i18nt("designer.widgetLabel." + widget.type) }}</i>
     </div>
   </el-col>
 </template>
 
 <script>
-import { i18n, SvgIcon,widgetManager } from "coder-vform-render";
+import { i18n, SvgIcon, Widgets } from "coder-vform-render";
 
 import refMixinDesign from "../../designer/refMixinDesign";
+
 
 export default {
   name: "grid-col-widget",
   componentName: "GridColWidget",
   mixins: [i18n, refMixinDesign],
   inject: ["refList"],
-  components: {
-    SvgIcon,
-    ...widgetManager.components
-  },
+  components: Widgets,
   props: {
     widget: Object,
     parentWidget: Object,
@@ -313,6 +268,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../style.scss";
+
 .grid-cell {
   min-height: 38px !important;
   //margin: 6px 0;  /* 设置了margin，栅格列的offset、push、pull会失效！！ */

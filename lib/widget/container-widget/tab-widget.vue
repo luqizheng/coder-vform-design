@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import { i18n, widgetManager } from "coder-vform-render";
+import { i18n, Widgets } from "coder-vform-render";
 
 import containerMixin from "./containerMixin";
 
@@ -91,9 +91,8 @@ export default {
   componentName: "ContainerWidget",
   mixins: [i18n, containerMixin, refMixinDesign],
   inject: ["refList"],
-  components: {
-    ...widgetManager.components,
-  },
+  components: Widgets,
+
   props: {
     widget: Object,
     parentWidget: Object,
