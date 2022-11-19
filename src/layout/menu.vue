@@ -7,9 +7,12 @@
   >
     <a-menu-item key="/example1">
       <pie-chart-outlined />
-      <span>example1</span>
+      <span>Designer</span>
     </a-menu-item>
-
+    <a-menu-item key="/example2">
+      <pie-chart-outlined />
+      <span>render</span>
+    </a-menu-item>
   </a-menu>
 </template>
 

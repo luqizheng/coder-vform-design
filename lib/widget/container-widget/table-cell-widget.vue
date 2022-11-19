@@ -87,14 +87,14 @@
 </template>
 
 <script>
-import { i18n, SvgIcon, Widgets } from "coder-vform-render";
+import { i18n, SvgIcon, widgets } from "coder-vform-render";
 import refMixinDesign from "../../designer/refMixinDesign";
 export default {
   name: "TableCellWidget",
   componentName: "TableCellWidget",
   mixins: [i18n, refMixinDesign],
   inject: ["refList"],
-  components: Widgets,
+  components: widgets,
   props: {
     widget: Object,
     parentWidget: Object,

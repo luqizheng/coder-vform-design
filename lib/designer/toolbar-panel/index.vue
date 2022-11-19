@@ -152,7 +152,7 @@
                 : '',
             ]"
           >
-            <VFormRender
+            <v-form-render
               ref="preForm"
               :form-json="formJson"
               :form-data="testFormData"
@@ -162,8 +162,8 @@
               @appendButtonClick="testOnAppendButtonClick"
               @buttonClick="testOnButtonClick"
               @formChange="handleFormChange"
-            >
-            </VFormRender>
+            />
+          
           </div>
         </div>
         <template #footer>
@@ -472,7 +472,7 @@
 <script>
 import CodeEditor from "@/code-editor/index";
 import Clipboard from "clipboard";
-import VFormRender from "coder-vform-render";
+/*import VFormRender from "coder-vform-render";*/
 import { util, i18n, SvgIcon } from "coder-vform-render";
 import { generateCode } from "../../utils/code-generator";
 const {
@@ -494,8 +494,7 @@ export default {
   components: {
     CodeEditor,
     Clipboard,
-    SvgIcon,
-    VFormRender,
+    SvgIcon
   },
   props: {
     designer: Object,

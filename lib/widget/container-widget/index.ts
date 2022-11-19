@@ -1,4 +1,4 @@
-import { IScheam, widgetManager } from "coder-vform-render";
+import { IScheam,addContainerWidgetSchema  } from "coder-vform-render";
 
 
 const modules = import.meta.glob('./*.vue', { eager: true, import: 'default' })
@@ -19,7 +19,7 @@ export default {
         continue;
       let widgetSchema = schemaFiles[path] as IScheam;
      
-      widgetManager.addContainerWidgetSchema(widgetSchema)
+      addContainerWidgetSchema(widgetSchema)
 
     }
   }

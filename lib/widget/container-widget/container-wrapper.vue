@@ -58,13 +58,13 @@
 </template>
 
 <script>
-import { i18n, SvgIcon,Widgets } from "coder-vform-render";
+import { i18n, SvgIcon, widgets } from "coder-vform-render";
 import containerMixin from "./containerMixin";
-
+console.log(widgets)
 
 export default {
   name: "container-wrapper",
-  components: Widgets,
+  components: widgets,
   mixins: [i18n, containerMixin],
   props: {
     widget: Object,

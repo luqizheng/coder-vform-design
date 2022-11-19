@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { i18n, Widgets } from "coder-vform-render";
+import { i18n, widgets } from "coder-vform-render";
 
 import containerMixin from "./containerMixin";
 import GridColWidget from "./grid-col-widget.vue";
@@ -34,7 +34,7 @@ export default {
   componentName: "ContainerWidget",
   mixins: [i18n, containerMixin, refMixinDesign],
   inject: ["refList"],
-  components: Widgets,
+  components: widgets,
 
   props: {
     widget: Object,

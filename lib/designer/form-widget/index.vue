@@ -59,13 +59,13 @@
 </template>
 
 <script>
-import { i18n } from "coder-vform-render";
+import { i18n,widgets } from "coder-vform-render";
 
 export default {
   name: "VFormWidget",
   componentName: "VFormWidget",
   mixins: [i18n],
-  components: {},
+  components: widgets,
   props: {
     designer: Object,
     formConfig: Object,
