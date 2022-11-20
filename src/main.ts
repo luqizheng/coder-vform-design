@@ -4,7 +4,7 @@ import './utils/require'
 import "ant-design-vue/dist/antd.css";
 import axios from "axios";
 import Antd from "ant-design-vue";
-
+import vformMenmber from 'coder-member-vform'
 import render from 'coder-vform-render'
 import vformElementPlus from 'coder-vform-element-plus'
 //import oaFrom from "oa-vform-components"
@@ -46,7 +46,7 @@ app.use(OAContract, { path: host + '/api/contract', request: axios })
 app.use(DevelopCompents)
     .use(render)
     .use(vformElementPlus)
-//    .use(oaFrom)
+   .use(vformMenmber)
     .use(Antd)
     .use(ElementPlus)
     .use(router)

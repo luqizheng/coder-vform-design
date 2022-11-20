@@ -21,7 +21,9 @@ export default defineConfig({
     },
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
   },
-
+  define: {
+    'process.env': process.env
+  },
   build: {
     lib: {
       entry: path.resolve(__dirname, "lib/index"),

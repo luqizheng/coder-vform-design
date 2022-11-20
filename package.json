@@ -1,7 +1,7 @@
 {
   "name": "coder-vform-designer",
   "private": false,
-  "version": "0.3.1",
+  "version": "0.5.5",
   "type": "module",
   "files": [
     "dist"
@@ -28,15 +28,12 @@
     "ace-builds": "^1.13.0",
     "axios": "^0.27.2",
     "clipboard": "^2.0.11",
-    "coder-vform-element-plus": "^0.3.1",
-    "coder-vform-render": "^0.3.1",
+    "coder-member-vform": "^0.5.5",
+    "coder-vform-element-plus": "^0.5.5",
+    "coder-vform-render": "^0.5.5",
     "element-plus": "^2.2.4",
     "file-saver": "^2.0.5",
     "mitt": "^3.0.0",
-    "oa-car-components": "0.1.9",
-    "oa-contract-compoents": "^0.2.12",
-    "oa-organization-components": "^0.1.14",
-    "oa-preview-components": "^0.2.0",
     "v-drag": "^3.0.8",
     "vue": "^3.2.37",
     "vuedraggable-es": "^4.1.1"

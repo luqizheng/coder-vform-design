@@ -68,6 +68,29 @@
                 </template>
               </draggable>
             </el-collapse-item>
+           
+            <el-collapse-item v-for="(widget, key) in advanceCustomerFields" :name="key" :key="key" :title="key">
+              <draggable tag="ul" :list="widget" item-key="key"
+                :group="{ name: 'dragGroup', pull: 'clone', put: false }" :move="checkFieldMove"
+                :clone="handleFieldWidgetClone" ghost-class="ghost" :sort="false">
+                <template #item="{ element: fld }">
+                  <li class="field-widget-item" :title="fld.displayName" @dblclick="addFieldByDbClick(fld)">
+                    <span>
+                      <svg-icon :icon-class="fld.icon" class-name="color-svg-icon" />
+
+                      {{
+                          i18n2t(
+                            `designer.widgetLabel.${fld.type}`,
+                            `extension.widgetLabel.${fld.type}`
+                          )
+                      }}
+                    </span>
+                  </li>
+                </template>
+              </draggable>
+
+            </el-collapse-item>
+
 
             <el-collapse-item name="4" :title="i18nt('designer.customFieldTitle')">
               <draggable tag="ul" :list="customFields" item-key="key"
@@ -89,6 +112,8 @@
                 </template>
               </draggable>
             </el-collapse-item>
+
+
           </el-collapse>
         </el-tab-pane>
 
@@ -128,13 +153,15 @@ import {
   basicFields as BFS,
   advanceFields as AFS,
   customFields as CFS,
+  advanceCustomerFields as ACF
 } from "coder-vform-render";
 
 import { formTemplates } from "./templatesConfig";
-import { i18n, util, SvgIcon,widgets } from "coder-vform-render";
+import { i18n, util, SvgIcon, widgets } from "coder-vform-render";
 const { addWindowResizeHandler, generateId } = util;
 
 import axios from "axios";
+import { thisTypeAnnotation } from "@babel/types";
 
 // import ftImg1 from '@/assets/ft-images/t1.png'
 // import ftImg2 from '@/assets/ft-images/t2.png'
@@ -167,6 +194,7 @@ export default {
       basicFields: [],
       advancedFields: [],
       customFields: [],
+      advanceCustomerFields: {},
 
       formTemplates: formTemplates,
       // ftImages: [
@@ -263,6 +291,24 @@ export default {
       }).filter((fld) => {
         return !this.isBanned(fld.type);
       });
+      ACF.forEach((value, key) => {
+
+        this.advanceCustomerFields[key] = value.map((fld) => {
+          return {
+            key: generateId(),
+            ...fld,
+            displayName: this.i18n2t(
+              `designer.widgetLabel.${fld.type}`,
+              `extension.widgetLabel.${fld.type}`
+            ),
+          };
+        }).filter((fld) => {
+          return !this.isBanned(fld.type);
+        });
+
+
+      })
+
     },
 
     handleContainerWidgetClone(origin) {
