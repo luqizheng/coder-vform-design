@@ -1,7 +1,7 @@
 {
   "name": "coder-vform-designer",
   "private": false,
-  "version": "0.5.5",
+  "version": "0.5.6",
   "type": "module",
   "files": [
     "dist"
@@ -26,7 +26,7 @@
     "@ant-design/icons-vue": "^6.1.0",
     "@element-plus/icons-vue": "^2.0.4",
     "ace-builds": "^1.13.0",
-    "axios": "^0.27.2",
+    "axios": "^1.1.3",
     "clipboard": "^2.0.11",
     "coder-member-vform": "^0.5.5",
     "coder-vform-element-plus": "^0.5.5",

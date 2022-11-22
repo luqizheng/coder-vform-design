@@ -39,10 +39,9 @@ export default defineConfig({
         "ant-design-vue",
         "coder-member-components-vue3",
         "element-plus",
-
-        "crypto-js", "vue-router",
+        "crypto-js", 
+        "vue-router",
         "axios"
-
       ],
       output: {
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
