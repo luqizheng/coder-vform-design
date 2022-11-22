@@ -1,7 +1,7 @@
 {
   "name": "coder-vform-designer",
   "private": false,
-  "version": "0.5.6",
+  "version": "0.6.0",
   "type": "module",
   "files": [
     "dist"
@@ -30,7 +30,7 @@
     "clipboard": "^2.0.11",
     "coder-member-vform": "^0.5.5",
     "coder-vform-element-plus": "^0.5.5",
-    "coder-vform-render": "^0.5.5",
+    "coder-vform-render": "^0.6.0",
     "element-plus": "^2.2.4",
     "file-saver": "^2.0.5",
     "mitt": "^3.0.0",
