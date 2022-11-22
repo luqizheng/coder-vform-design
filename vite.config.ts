@@ -41,7 +41,9 @@ export default defineConfig({
         "element-plus",
         "crypto-js", 
         "vue-router",
-        "axios"
+        "axios",
+        "coder-vform-render",
+        "coder-vform-element-plus"
       ],
       output: {
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
