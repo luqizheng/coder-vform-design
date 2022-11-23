@@ -39,11 +39,15 @@ export default defineConfig({
         "ant-design-vue",
         "coder-member-components-vue3",
         "element-plus",
-        "crypto-js", 
+        "crypto-js",
         "vue-router",
         "axios",
         "coder-vform-render",
-        "coder-vform-element-plus"
+        "coder-vform-element-plus",
+        "clipboard", "mitt",
+        "vuedraggable-es",
+        "file-saver",
+        "v-drag"
       ],
       output: {
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量

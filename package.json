@@ -31,6 +31,7 @@
     "coder-member-vform": "^0.5.5",
     "coder-vform-element-plus": "^0.5.5",
     "coder-vform-render": "^0.6.3",
+    "coder-vue3-monaco-editor": "^1.0.5",
     "element-plus": "^2.2.4",
     "file-saver": "^2.0.5",
     "mitt": "^3.0.0",
