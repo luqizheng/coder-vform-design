@@ -588,7 +588,7 @@ export default {
     },
   },
   mounted() {
-    let maxTBWidth = this.designerConfig.toolbarMaxWidth || 420;
+    let maxTBWidth = this.designerConfig.toolbarMaxWidth || 460;
     let minTBWidth = this.designerConfig.toolbarMinWidth || 300;
     let newTBWidth = window.innerWidth - 260 - 300 - 320 - 80;
     this.toolbarWidth =
