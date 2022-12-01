@@ -504,7 +504,7 @@ export default {
     return {
       designerConfig: this.getDesignerConfig(),
 
-      toolbarWidth: 420,
+      toolbarWidth: 460,
       showPreviewDialogFlag: false,
       showImportJsonDialogFlag: false,
       showExportJsonDialogFlag: false,
