@@ -11,13 +11,13 @@ import { addDirective } from './utils/directive'
 
 import 'virtual:svg-icons-register'
 import '@/iconfont/iconfont.css'
-
+import designer from './designer/index.vue'
 const install = (app: any) => {
     app.use(containerWidget);
     addDirective(app)
     registerIcon(app)
     app.use(render)
-    app.component('v-form-designer', defineAsyncComponent(() => import('./designer/index.vue')));
+    app.component('v-form-designer', designer);
     app.component('draggable', Draggable)
 
 }
