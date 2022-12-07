@@ -1,7 +1,7 @@
 {
   "name": "coder-vform-designer",
   "private": false,
-  "version": "0.6.6",
+  "version": "0.6.7",
   "type": "module",
   "files": [
     "dist"
