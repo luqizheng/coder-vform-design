@@ -2,7 +2,7 @@
   <el-form-item label="onClick" label-width="150px">
     <el-button
       type="info"
-      icon="el-icon-edit"
+       :icon="Edit"
       plain
       round
       @click="editEventHandler('onClick', eventParams)"
@@ -16,6 +16,9 @@
 import { i18n } from "coder-vform-render";
 import eventMixin from "./eventMixin";
 
+import {
+  Edit
+} from '@element-plus/icons-vue'
 export default {
   name: "onClick-editor",
   mixins: [i18n, eventMixin],

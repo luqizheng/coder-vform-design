@@ -14,7 +14,7 @@
                          @change="(newValue, oldValue) => spanChanged(selectedWidget, colItem, colIdx, newValue, oldValue)"
                          class="cell-span-input"></el-input-number>
         <el-button circle plain size="small" type="danger" @click="deleteCol(selectedWidget, colIdx)"
-                   icon="el-icon-minus" class="col-delete-button"></el-button>
+                   :icon="Minus" class="col-delete-button"></el-button>
       </li>
       <div>
         <el-button type="default" @click="addNewCol(selectedWidget)">{{i18nt('designer.setting.addColumn')}}</el-button>
@@ -25,7 +25,9 @@
 
 <script>
 import { i18n } from "coder-vform-render";
-
+import {
+  Minus,
+} from '@element-plus/icons-vue'
   export default {
     name: "gutter-editor",
     mixins: [i18n],
@@ -33,6 +35,9 @@ import { i18n } from "coder-vform-render";
       designer: Object,
       selectedWidget: Object,
       optionModel: Object,
+    },
+    components:{
+      Minus
     },
     methods: {
       spanChanged(curGrid) {

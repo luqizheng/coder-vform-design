@@ -2,7 +2,7 @@
   <el-form-item label="onValidate" label-width="150px">
     <el-button
       type="info"
-      icon="el-icon-edit"
+       :icon="Edit"
       plain
       round
       @click="editEventHandler('onValidate', eventParams)"
@@ -15,9 +15,13 @@
 <script>
 import { i18n } from "coder-vform-render";
 import eventMixin from './eventMixin'
+import {
+  Edit
+} from '@element-plus/icons-vue'
 export default {
   name: "onValidate-editor",
   mixins: [i18n, eventMixin],
+  components:{Edit},
   props: {
     designer: Object,
     selectedWidget: Object,

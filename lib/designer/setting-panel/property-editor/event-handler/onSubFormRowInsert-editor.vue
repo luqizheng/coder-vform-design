@@ -1,6 +1,6 @@
 <template>
   <el-form-item label="onSubFormRowInsert" label-width="150px">
-    <el-button type="info" icon="el-icon-edit" plain round @click="editEventHandler('onSubFormRowInsert', eventParams)">
+    <el-button type="info"  :icon="Edit" plain round @click="editEventHandler('onSubFormRowInsert', eventParams)">
       {{i18nt('designer.setting.addEventHandler')}}</el-button>
   </el-form-item>
 </template>

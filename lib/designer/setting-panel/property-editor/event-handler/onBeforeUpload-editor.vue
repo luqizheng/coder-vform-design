@@ -2,7 +2,7 @@
   <el-form-item label="onBeforeUpload" label-width="150px">
     <el-button
       type="info"
-      icon="el-icon-edit"
+      :icon="Edit"
       plain
       round
       @click="editEventHandler('onBeforeUpload', eventParams)"
@@ -13,6 +13,9 @@
 </template>
 
 <script>
+import {
+  Edit
+} from '@element-plus/icons-vue'
 import { i18n  } from "coder-vform-render";
 import eventMixin from './eventMixin'
 export default {
@@ -22,6 +25,9 @@ export default {
     designer: Object,
     selectedWidget: Object,
     optionModel: Object,
+  },
+  components:{
+    Edit
   },
   data() {
     return {

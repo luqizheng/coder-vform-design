@@ -38,7 +38,7 @@
                 size="small"
                 type="danger"
                 @click="deleteOption(option, idx)"
-                icon="el-icon-minus"
+                :icon="Minus"
                 class="col-delete-button"
               ></el-button>
             </el-radio>
@@ -84,7 +84,7 @@
                 size="small"
                 type="danger"
                 @click="deleteOption(option, idx)"
-                icon="el-icon-minus"
+                :icon="Minus"
                 class="col-delete-button"
               ></el-button>
             </el-checkbox>
@@ -204,13 +204,15 @@
 //import Draggable from 'vuedraggable'
 import CodeEditor from "@/code-editor/index";
 import { i18n } from "coder-vform-render";
-
+import {
+  Minus,
+} from '@element-plus/icons-vue'
 export default {
   name: "OptionItemsSetting",
   mixins: [i18n],
   components: {
     //Draggable,
-    CodeEditor,
+    CodeEditor,Minus
   },
   props: {
     designer: Object,

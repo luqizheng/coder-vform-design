@@ -5,67 +5,33 @@
 <template>
   <div>
     <el-form-item :label="i18nt('designer.setting.customClass')">
-      <el-select
-        v-model="optionModel.customClass"
-        multiple
-        filterable
-        allow-create
-        default-first-option
-      >
-        <el-option
-          v-for="(item, idx) in cssClassList"
-          :key="idx"
-          :label="item"
-          :value="item"
-        ></el-option>
+      <el-select v-model="optionModel.customClass" multiple filterable allow-create default-first-option>
+        <el-option v-for="(item, idx) in cssClassList" :key="idx" :label="item" :value="item"></el-option>
       </el-select>
     </el-form-item>
-    <el-form-item
-      :label="i18nt('designer.setting.tabPaneSetting')"
-    ></el-form-item>
+    <el-form-item :label="i18nt('designer.setting.tabPaneSetting')"></el-form-item>
     <el-form-item label-width="0" class="panes-setting">
-      <draggable
-        tag="ul"
-        :list="selectedWidget.tabs"
-        item-key="id"
-        v-bind="{
-          group: 'panesGroup',
-          ghostClass: 'ghost',
-          handle: '.drag-option',
-        }"
-      >
+      <draggable tag="ul" :list="selectedWidget.tabs" item-key="id" v-bind="{
+        group: 'panesGroup',
+        ghostClass: 'ghost',
+        handle: '.drag-option',
+      }">
         <template #item="{ element: tpItem, index: tpIdx }">
           <li class="col-item">
             <!-- span style="margin-right: 12px">{{tpIdx + 1}}</span -->
-            <el-checkbox
-              v-model="tpItem.options.active"
-              disabled
-              @change="(evt) => onTabPaneActiveChange(evt, tpItem)"
-              style="margin-right: 8px"
-              >{{ i18nt("designer.setting.paneActive") }}</el-checkbox
-            >
-            <el-input
-              type="text"
-              v-model="tpItem.options.label"
-              style="width: 155px"
-            ></el-input>
+            <el-checkbox v-model="tpItem.options.active" disabled @change="(evt) => onTabPaneActiveChange(evt, tpItem)"
+              style="margin-right: 8px">{{ i18nt("designer.setting.paneActive") }}</el-checkbox>
+            <el-input type="text" v-model="tpItem.options.label" style="width: 155px"></el-input>
             <i class="iconfont icon-drag drag-option"></i>
-            <el-button
-              circle
-              plain
-              size="small"
-              type="danger"
-              @click="deleteTabPane(selectedWidget, tpIdx)"
-              icon="el-icon-minus"
-              class="col-delete-button"
-            ></el-button>
+            <el-button circle plain size="small" type="danger" @click="deleteTabPane(selectedWidget, tpIdx)"
+              :icon="Minus" class="col-delete-button"></el-button>
           </li>
         </template>
       </draggable>
 
       <div>
         <el-button type="default" @click="addTabPane(selectedWidget)">{{
-          i18nt("designer.setting.addTabPane")
+            i18nt("designer.setting.addTabPane")
         }}</el-button>
       </div>
     </el-form-item>
@@ -76,7 +42,9 @@
 import { i18n, util } from "coder-vform-render";
 const { deepClone } = util;
 //import Draggable from 'vuedraggable'
-
+import {
+  Minus,
+} from '@element-plus/icons-vue'
 export default {
   name: "tab-customClass-editor",
   componentName: "PropertyEditor",
@@ -126,6 +94,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../../../style.scss";
+
 li.col-item {
   list-style: none;
 
@@ -143,7 +112,8 @@ li.col-item {
 .panes-setting {
   ul {
     padding-inline-start: 0;
-    padding-left: 0; /* 重置IE11默认样式 */
+    padding-left: 0;
+    /* 重置IE11默认样式 */
     margin: 0;
   }
 
