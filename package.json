@@ -30,7 +30,7 @@
     "clipboard": "^2.0.11",
     "coder-member-components-vue3": "^3.10.5",
     "coder-vform-element-plus": "^1.0.0",
-    "coder-vform-render": "^1.1.0",
+    "coder-vform-render": "^1.1.2",
     "coder-vue3-monaco-editor": "^1.0.6",
     "element-plus": "^2.2.4",
     "file-saver": "^2.0.5",
