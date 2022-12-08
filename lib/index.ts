@@ -1,8 +1,5 @@
-import { App, defineAsyncComponent } from 'vue'
-import containerWidget from './widget/container-widget'
 
-import render from 'coder-vform-render'
-import 'coder-vform-render/dist/style.css'
+import containerWidget from './widget/container-widget'
 
 
 import Draggable from 'vuedraggable-es'
@@ -16,7 +13,6 @@ const install = (app: any) => {
     app.use(containerWidget);
     addDirective(app)
     registerIcon(app)
-    app.use(render)
     app.component('v-form-designer', designer);
     app.component('draggable', Draggable)
 
